@@ -1,0 +1,45 @@
+﻿<Mah:MetroWindow x:Class="ScreenCapture.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
+        xmlns:View="clr-namespace:ScreenCapture.View"
+        xmlns:ViewModel="clr-namespace:ScreenCapture.ViewModel"
+        mc:Ignorable="d"
+        Title="Screen Capture"
+        Height="{Binding WindowHeight, Mode=TwoWay}" 
+        Width="{Binding WindowWidth, Mode=TwoWay}"
+        AllowsTransparency="True" 
+        Background="Transparent" 
+        Topmost="True" 
+        Left="{Binding WindowLeft, Mode=OneWayToSource}"
+        Top="{Binding WindowTop, Mode=OneWayToSource}"
+        WindowTitleBrush="LightSeaGreen" 
+        BorderBrush="LightSeaGreen" 
+        WindowStyle="None"
+        ShowTitleBar="False"
+        ResizeMode="CanResizeWithGrip"
+        WindowStartupLocation="CenterScreen"
+        ShowMaxRestoreButton="False"
+        MouseLeftButtonDown="MetroWindow_MouseLeftButtonDown"
+        Loaded="MetroWindow_Loaded"
+        Icon="/Resources/ScreenCapture.ico">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="PreviewMouseDoubleClick">
+            <cmd:EventToCommand Command="{Binding WindowPreviewMouseDoubleClickCommand}" PassEventArgsToCommand="True"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="PreviewKeyDown">
+            <cmd:EventToCommand Command="{Binding WindowPreviewKeyDownCommand}" PassEventArgsToCommand="True"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <Window.DataContext>
+        <ViewModel:ScreenCaptureViewModel/>
+    </Window.DataContext>
+
+    <View:ScreenCaptureView/>
+</Mah:MetroWindow>

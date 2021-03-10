@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ScreenCaptureControls">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="GetActualSizeGrid.xaml"/>
+        <ResourceDictionary Source="ShortcutKeyGrid.xaml"/>
+        <ResourceDictionary Source="FilePathTextBox.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
