@@ -140,7 +140,7 @@ namespace ScreenCapture.ViewModel
             }
             else if (string.IsNullOrEmpty(header) || string.IsNullOrWhiteSpace(header))
             {
-                header = $"New Setting";
+                header = GetSettingName();
             }
 
             // Setting Add Button Click Event
@@ -164,6 +164,25 @@ namespace ScreenCapture.ViewModel
             {
                 _SettingChangeEvent(SGClassCollection.Select(x => x.Header).ToList());
             }
+        }
+
+        private string GetSettingName()
+        {
+            string name = $"New Setting";
+            if (SGClassCollection.Count == 0)
+                return name;
+
+            string result = name;
+            int index = 0;
+            while (true)
+            {
+                if (!SGClassCollection.Any(x => x.Header == result))
+                    break;
+
+                index++;
+                result = $"{name}_{index}";
+            }
+            return result;
         }
     }
 }

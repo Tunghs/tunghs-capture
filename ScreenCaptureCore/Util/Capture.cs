@@ -59,17 +59,17 @@ namespace ScreenCaptureCore.Util
         private string GetSvaeFilePath(string dirPath)
         {
             string filePath = $@"{dirPath}\{DateTime.Now.ToString("yyyyMMdd_HHmmss")}";
-            string avaibleFilePath = filePath;
+            string saveFilePath = filePath;
             int index = 0;
             while (true)
             {
-                if (!File.Exists($"{avaibleFilePath}.png"))
+                if (!File.Exists($"{saveFilePath}.png"))
                     break;
 
+                saveFilePath = $"{filePath}_{index}";
                 index++;
-                avaibleFilePath = $"{filePath}_{index}";
             }
-            return $"{avaibleFilePath}.png";
+            return $"{saveFilePath}.png";
         }
 
         #endregion
