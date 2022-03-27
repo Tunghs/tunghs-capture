@@ -66,8 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\BitmapController.cs" />
-    <Compile Include="Util\CaptureController.cs" />
+    <Compile Include="Util\Capture.cs" />
     <Compile Include="Util\ManualKeyboard.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

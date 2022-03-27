@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30503.244
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCapture", "ScreenCapture\ScreenCapture.csproj", "{6D6A1DDD-5F90-4AEB-80F0-C8C673AC5B7C}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCaptureControls", "Sc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCaptureCore", "ScreenCaptureCore\ScreenCaptureCore.csproj", "{5A110EF5-C003-4DDB-8C0A-20F31DB4EAB0}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{B0FBE43D-E33A-412E-9BE6-2F8A3D779EDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveFileTest", "SaveFileTest\SaveFileTest.csproj", "{610F71A0-EF67-45F6-A087-16ED74193D2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,10 +43,14 @@ Global
 		{5A110EF5-C003-4DDB-8C0A-20F31DB4EAB0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5A110EF5-C003-4DDB-8C0A-20F31DB4EAB0}.Release|x64.ActiveCfg = Release|Any CPU
 		{5A110EF5-C003-4DDB-8C0A-20F31DB4EAB0}.Release|x64.Build.0 = Release|Any CPU
-		{B0FBE43D-E33A-412E-9BE6-2F8A3D779EDC}.Debug|Any CPU.ActiveCfg = Debug
-		{B0FBE43D-E33A-412E-9BE6-2F8A3D779EDC}.Debug|x64.ActiveCfg = Debug
-		{B0FBE43D-E33A-412E-9BE6-2F8A3D779EDC}.Release|Any CPU.ActiveCfg = Release
-		{B0FBE43D-E33A-412E-9BE6-2F8A3D779EDC}.Release|x64.ActiveCfg = Release
+		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Debug|x64.Build.0 = Debug|Any CPU
+		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Release|x64.ActiveCfg = Release|Any CPU
+		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
