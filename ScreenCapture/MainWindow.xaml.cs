@@ -3,13 +3,25 @@ using System.Windows.Threading;
 using System.Windows.Forms;
 using System;
 using System.Windows;
+using System.Runtime.InteropServices;
 
 namespace ScreenCapture
 {
     public partial class MainWindow : MetroWindow
     {
+        private enum ProcessDPIAwareness
+        {
+            ProcessDPIUnaware = 0,
+            ProcessSystemDPIAware = 1,
+            ProcessPerMonitorDPIAware = 2
+        }
+
+        [DllImport("shcore.dll")]
+        private static extern int SetProcessDpiAwareness(ProcessDPIAwareness value);
+
         public MainWindow()
         {
+            SetProcessDpiAwareness(ProcessDPIAwareness.ProcessPerMonitorDPIAware);
             InitializeComponent();
         }
 

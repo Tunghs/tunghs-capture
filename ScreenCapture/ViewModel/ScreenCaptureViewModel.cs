@@ -10,6 +10,7 @@ using ScreenCapture.Util;
 using ScreenCapture.Model;
 using System.Windows.Threading;
 using ScreenCaptureCore.Util;
+using System.Runtime.InteropServices;
 
 namespace ScreenCapture.ViewModel
 {
@@ -264,8 +265,19 @@ namespace ScreenCapture.ViewModel
                 case "Capture":
                     CaptureScreen();
                     break;
+                case "Full":
+                    CaptureFullScreen();
+                    break;
             }
         }
+
+        private void CaptureFullScreen()
+        {
+            var width = SystemParameters.WorkArea.Width;
+            var height = SystemParameters.WorkArea.Height;
+        }
+
+
 
         private void WindowPreviewKeyDown(KeyEventArgs e)
         {

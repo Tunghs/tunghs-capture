@@ -38,6 +38,13 @@
                     <Button.ToolTip>
                         <TextBlock Text="Capture"/>
                     </Button.ToolTip>
+                    <Button.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Full" 
+                                      Command="{Binding ButtonClickCommand}"
+                                      CommandParameter="Full"/>
+                        </ContextMenu>
+                    </Button.ContextMenu>
                 </Button>
 
                 <Grid Grid.Row="0" x:Name="TitleGrid" Background="LightSeaGreen">
