@@ -21,7 +21,7 @@ namespace ScreenCapture
 
         public MainWindow()
         {
-            SetProcessDpiAwareness(ProcessDPIAwareness.ProcessPerMonitorDPIAware);
+            // (ProcessDPIAwareness.ProcessPerMonitorDPIAware);
             InitializeComponent();
         }
 

@@ -11,6 +11,7 @@ using ScreenCapture.Model;
 using System.Windows.Threading;
 using ScreenCaptureCore.Util;
 using System.Runtime.InteropServices;
+using System.Drawing;
 
 namespace ScreenCapture.ViewModel
 {
@@ -276,8 +277,6 @@ namespace ScreenCapture.ViewModel
             var width = SystemParameters.WorkArea.Width;
             var height = SystemParameters.WorkArea.Height;
         }
-
-
 
         private void WindowPreviewKeyDown(KeyEventArgs e)
         {
