@@ -10,7 +10,7 @@
         xmlns:ViewModel="clr-namespace:ScreenCapture.ViewModel"
         mc:Ignorable="d"
         Title="Screen Capture"
-        Height="{Binding WindowHeight, Mode=TwoWay}" 
+        Height="{Binding WindowHeight, Mode=TwoWay}"
         Width="{Binding WindowWidth, Mode=TwoWay}"
         AllowsTransparency="True" 
         Background="Transparent" 

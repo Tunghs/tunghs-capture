@@ -71,9 +71,6 @@ namespace ScreenCapture.Util
 
         public KeyboardListener()
         {
-            
-
-
             // Managed 환경의 delegate 인스턴스를 Native에 전달해서 GC가 구동된 이후 delegate 인스턴스가 정리되어버리기 때문에 
             //이후에 native에서 삭제된 인스턴스의 delegate 값으로 호출하게 되면 "CallbackOnCollectedDelegate" 오류가 생긴다
             // 따라서 GC에 의해서 인스턴스가 정리되지 않도록 참조 포인터를 하나라도 유지하는 방법이 있으며, 이를 위해 코드 상단에 타입 멤버로 값을 가지고 있으면 된다.

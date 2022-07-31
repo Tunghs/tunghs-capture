@@ -4,30 +4,42 @@ using System.Windows.Forms;
 using System;
 using System.Windows;
 using System.Runtime.InteropServices;
+using System.Drawing;
+using ScreenCapture.ViewModel;
 
 namespace ScreenCapture
 {
     public partial class MainWindow : MetroWindow
     {
-        private enum ProcessDPIAwareness
-        {
-            ProcessDPIUnaware = 0,
-            ProcessSystemDPIAware = 1,
-            ProcessPerMonitorDPIAware = 2
-        }
-
-        [DllImport("shcore.dll")]
-        private static extern int SetProcessDpiAwareness(ProcessDPIAwareness value);
+        private const int Default_DPI = 96;
+        public ScreenCaptureViewModel ScreenCaptureVM { get; set; } 
 
         public MainWindow()
         {
-            // (ProcessDPIAwareness.ProcessPerMonitorDPIAware);
             InitializeComponent();
+            ScreenCaptureVM = new ScreenCaptureViewModel();
+            this.DataContext = ScreenCaptureVM;
         }
 
-        private DispatcherTimer _Timer;
         public NotifyIcon Notify;
         private void MetroWindow_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            SetDPI();
+            InitNotify();
+        }
+
+        private void SetDPI()
+        {
+            PresentationSource source = PresentationSource.FromVisual(this);
+            if (source == null) 
+                return;
+
+            double dpiX = 96.0 * source.CompositionTarget.TransformToDevice.M11;
+            double dpiY = 96.0 * source.CompositionTarget.TransformToDevice.M22;
+            ScreenCaptureVM.SetMonitorInfo(dpiX / Default_DPI);
+        }
+
+        private void InitNotify()
         {
             try
             {
@@ -56,11 +68,11 @@ namespace ScreenCapture
 
                 Notify.ContextMenu = menu;
                 Notify.Text = "ScreenCapture";
-                
-            }
-            catch(Exception ex)
-            {
 
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
             }
         }
 
@@ -80,7 +92,5 @@ namespace ScreenCapture
         {
             DragMove();
         }
-
-        
     }
 }

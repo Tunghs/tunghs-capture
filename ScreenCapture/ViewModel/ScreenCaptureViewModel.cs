@@ -92,7 +92,9 @@ namespace ScreenCapture.ViewModel
         #endregion
 
         #region Field
-
+        private double dpiScale;
+        private int monitorWidth;
+        private int monitorHeight;
         private bool isSaveClipboard = false;
         private KeyboardListener keyboardListener;
         private Capture capture;
@@ -113,10 +115,18 @@ namespace ScreenCapture.ViewModel
             Initialize();
         }
 
+        public void SetMonitorInfo(double dpiScale)
+        {
+            this.dpiScale = dpiScale;
+            monitorWidth = (int)(SystemParameters.PrimaryScreenWidth * dpiScale);
+            monitorHeight = (int)(SystemParameters.PrimaryScreenHeight * dpiScale);
+
+            capture = new Capture(this.dpiScale, monitorWidth, monitorHeight);
+        }
+
         private void Initialize()
         {
             DefaultData.Seed();
-            capture = new Capture();
 
             OptionViewModel = new OptionViewModel();
             OptionViewModel.CaptureSettingViewModel._SettingAddEvent += new CaptureSettingViewModel.SettingAddHandler(SendScreenInfo);
@@ -320,8 +330,6 @@ namespace ScreenCapture.ViewModel
         {
             isSaveClipboard = (isSaveClipboard) ? false : true;
         }
-
-
 
         /// <summary>
         /// 캡처 사이즈 텍스트 박스에 숫자만 입력 받음
