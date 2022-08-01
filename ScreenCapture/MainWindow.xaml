@@ -37,9 +37,5 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
 
-    <Window.DataContext>
-        <ViewModel:ScreenCaptureViewModel/>
-    </Window.DataContext>
-
     <View:ScreenCaptureView/>
 </Mah:MetroWindow>

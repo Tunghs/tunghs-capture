@@ -12,6 +12,7 @@ namespace ScreenCapture
     public partial class MainWindow : MetroWindow
     {
         private const int Default_DPI = 96;
+        public NotifyIcon Notify;
         public ScreenCaptureViewModel ScreenCaptureVM { get; set; } 
 
         public MainWindow()
@@ -21,7 +22,6 @@ namespace ScreenCapture
             this.DataContext = ScreenCaptureVM;
         }
 
-        public NotifyIcon Notify;
         private void MetroWindow_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
             SetDPI();

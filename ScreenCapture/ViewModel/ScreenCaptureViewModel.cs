@@ -195,26 +195,6 @@ namespace ScreenCapture.ViewModel
         }
 
         /// <summary>
-        /// delay
-        /// </summary>
-        /// <param name="ms"></param>
-        /// <returns></returns>
-        public DateTime Delay(int ms)
-        {
-            DateTime thisMoment = DateTime.Now;
-            TimeSpan duration = new TimeSpan(0, 0, 0, 0, ms);
-            DateTime afterWards = thisMoment.Add(duration);
-
-            while (afterWards >= thisMoment)
-            {
-                System.Windows.Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
-                thisMoment = DateTime.Now;
-            }
-
-            return DateTime.Now;
-        }
-
-        /// <summary>
         /// Setting 창에서 항목 추가시 현재 스크린의 정보를 업데이트해서 전달함
         /// </summary>
         private void SendScreenInfo()
