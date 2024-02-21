@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCaptureControls", "Sc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCaptureCore", "ScreenCaptureCore\ScreenCaptureCore.csproj", "{5A110EF5-C003-4DDB-8C0A-20F31DB4EAB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveFileTest", "SaveFileTest\SaveFileTest.csproj", "{610F71A0-EF67-45F6-A087-16ED74193D2E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,14 +41,6 @@ Global
 		{5A110EF5-C003-4DDB-8C0A-20F31DB4EAB0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5A110EF5-C003-4DDB-8C0A-20F31DB4EAB0}.Release|x64.ActiveCfg = Release|Any CPU
 		{5A110EF5-C003-4DDB-8C0A-20F31DB4EAB0}.Release|x64.Build.0 = Release|Any CPU
-		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Debug|x64.Build.0 = Debug|Any CPU
-		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Release|x64.ActiveCfg = Release|Any CPU
-		{610F71A0-EF67-45F6-A087-16ED74193D2E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
