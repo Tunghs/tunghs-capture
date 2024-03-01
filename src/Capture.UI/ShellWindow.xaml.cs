@@ -23,5 +23,20 @@ namespace Capture.UI
         {
             InitializeComponent();
         }
+
+        private void MainGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void MainGrid_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.SizeAll;
+        }
+
+        private void MainGrid_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Arrow;
+        }
     }
 }
