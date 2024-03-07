@@ -12,6 +12,7 @@
     Background="Transparent"
     BorderBrush="Red"
     BorderThickness="1"
+    Topmost="True"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
     mc:Ignorable="d">
@@ -20,25 +21,29 @@
         <WindowChrome CaptionHeight="0" ResizeBorderThickness="5" />
     </WindowChrome.WindowChrome>
 
-    <Grid x:Name="MainGrid"
-        Background="White"
-        MouseLeftButtonDown="MainGrid_MouseLeftButtonDown"
-        MouseEnter="MainGrid_MouseEnter"
-        MouseLeave="MainGrid_MouseLeave"
-        Opacity="0.01">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="60" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="30" />
-        </Grid.RowDefinitions>
-
-        <Grid x:Name="ControlGrid" />
-
-        <Grid Grid.Row="2" />
-
+    <Grid>
         <Grid
-            Grid.Row="3"
+            x:Name="BackGroundGrid"
             Background="White"
-            Opacity="0.2" />
+            MouseEnter="MainGrid_MouseEnter"
+            MouseLeave="MainGrid_MouseLeave"
+            MouseLeftButtonDown="MainGrid_MouseLeftButtonDown"
+            Opacity="0.01" />
+
+        <Grid x:Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="ControlGrid" />
+
+            <Grid Grid.Row="1" />
+
+            <Grid Grid.Row="2">
+                <TextBlock Foreground="Red" Text="hi" />
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
