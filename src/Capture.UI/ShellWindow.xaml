@@ -34,16 +34,11 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="60" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="30" />
             </Grid.RowDefinitions>
 
             <Grid x:Name="ControlGrid" />
 
             <Grid Grid.Row="1" />
-
-            <Grid Grid.Row="2">
-                <TextBlock Foreground="Red" Text="hi" />
-            </Grid>
         </Grid>
     </Grid>
 </Window>
