@@ -10,7 +10,7 @@
     Height="450"
     AllowsTransparency="True"
     Background="Transparent"
-    BorderBrush="Red"
+    BorderBrush="White"
     BorderThickness="1"
     Topmost="True"
     WindowStartupLocation="CenterScreen"
