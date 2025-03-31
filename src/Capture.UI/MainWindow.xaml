@@ -24,6 +24,17 @@
             Title="Solution Team UI Gallery"
             CloseWindowByDoubleClickOnIcon="True" />
 
-        <Button Click="Button_Click" Content="Test" />
+        <StackPanel Orientation="Horizontal">
+            <Button
+                x:Name="DragBtn"
+                Click="DragBtn_Click"
+                Content="Test"
+                PreviewMouseDown="Button_PreviewMouseDown" />
+            <Button
+                x:Name="CloseBtn"
+                Click="CloseBtn_Click"
+                Content="Close" />
+        </StackPanel>
+
     </Grid>
 </ui:FluentWindow>
