@@ -1,9 +1,17 @@
-﻿using System.Configuration;
+﻿using CommunityToolkit.Mvvm.DependencyInjection;
+
+using System.Configuration;
 using System.Data;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Media.Imaging;
 
-namespace Capture.UI
+using TunghsCapture.UI.Core;
+
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace TunghsCapture.UI
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -1,9 +1,9 @@
-﻿using CommunityToolkit.Mvvm.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using CommunityToolkit.Mvvm.DependencyInjection;
 
-namespace Capture.UI
+namespace TunghsCapture.UI
 {
-    public class Bootstrapper
+    internal class Bootstrapper
     {
         public Bootstrapper()
         {
@@ -19,7 +19,10 @@ namespace Capture.UI
         {
             var services = new ServiceCollection();
 
-            // ViewModel 등록
+            // Services
+
+            // Viewer ViewModels
+
             return services.BuildServiceProvider();
         }
     }
